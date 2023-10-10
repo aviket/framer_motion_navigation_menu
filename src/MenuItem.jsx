@@ -1,6 +1,7 @@
 import * as React from "react";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import './MenuItem.css'
 
 
 const variants = {
@@ -25,7 +26,7 @@ const colors = ["#FF008C", "#D309E1", "#9C1AFF", "#7700FF", "#4400FF"];
 
 
 export const MenuItem = (props) => {
-  const style = { border: `1px solid ${colors[3]}`, background: `rgba(0, 0, 0, 0.2)` };
+  const style = { border: `1px solid ${colors[3]}`, background: `rgba(255, 250, 0, 0.5)` , height: `50px` };
   return (
     <motion.li
       variants={variants}
@@ -35,8 +36,8 @@ export const MenuItem = (props) => {
     >
 
       <div className="icon-div" onClick={props.data.fcallBack}>
-        <FontAwesomeIcon icon={props.data.icon} style={style} />
-        <div className="text-placeholder" style={style} >{props.data.txt}</div>
+        <FontAwesomeIcon icon={props.data.icon} className="fonticon" />
+        <div className="text-placeholder" >{props.data.txt}</div>
       </div>
 
 

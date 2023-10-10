@@ -1,10 +1,7 @@
 import React , {useState} from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { MenuItem } from "./MenuItem";
-import { faHouse } from "@fortawesome/free-solid-svg-icons";
-import { faAddressCard } from "@fortawesome/free-solid-svg-icons";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-import { faSquareRss } from "@fortawesome/free-solid-svg-icons";
+
 
 const variants = {
   open: {

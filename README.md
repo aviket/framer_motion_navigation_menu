@@ -19,7 +19,7 @@ he project will then be running on http://localhost:5137.
 To use the side navigation menu, simply click on the hamburger menu icon in the top left corner of the screen.
 
 Demo
-A live demo of this project is available at [].
+A live demo of this project is available at https://superb-tiramisu-064430.netlify.app/.
 
 License
 This project is licensed under the MIT License.
