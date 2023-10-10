@@ -5,6 +5,7 @@ import { useDimensions } from "./use-dimensions";
 import { MenuToggle } from "./MenuToggle";
 import { Navigation } from "./Navigation";
 
+
 const sidebar = {
   open: (height = 1000) => ({
     clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
@@ -25,7 +26,8 @@ const sidebar = {
   }
 };
 
-export const Example = () => {
+export const Entrypoint = ({navItems}) => {
+  console.log(navItems)
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
@@ -38,7 +40,7 @@ export const Example = () => {
       ref={containerRef}
     >
       <motion.div className="background" variants={sidebar} />
-      <Navigation />
+      <Navigation navItems={navItems}/>
       <MenuToggle toggle={() => toggleOpen()} />
     </motion.nav>
   );

@@ -1,6 +1,10 @@
-import * as React from "react";
-import { AnimatePresence , motion } from "framer-motion";
+import React , {useState} from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { MenuItem } from "./MenuItem";
+import { faHouse } from "@fortawesome/free-solid-svg-icons";
+import { faAddressCard } from "@fortawesome/free-solid-svg-icons";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { faSquareRss } from "@fortawesome/free-solid-svg-icons";
 
 const variants = {
   open: {
@@ -11,12 +15,28 @@ const variants = {
   }
 };
 
-export const Navigation = () => (
-  <motion.ul variants={variants}>
-    {itemIds.map(i => (
-      <MenuItem i={i} key={i} />
-    ))}
-  </motion.ul>
-);
 
-const itemIds = [0, 1, 2, 3, 4];
+
+export const Navigation = ({navItems}) => {
+  console.log("ff")
+  console.log(navItems  )
+  console.log("ff")
+  const [activeComponent , setActiveComponent] = useState(0)
+  const handleClick = (num) => {
+     setActiveComponent(num + 2);
+     console.log(num);
+
+  };
+  
+  // const navItems = [{ id: 1, text: 'Home', icon: faHouse, fcallBack: { handleClick } }, { id: 2, text: 'About', icon: faAddressCard, fcallBack: { handleClick } }, { id: 3, text: 'Shop', icon: faCartShopping, fcallBack: { handleClick } }, { id: 4, text: 'Blog', icon: faSquareRss, fcallBack: { handleClick } }]
+  return (
+    <motion.ul variants={variants}>
+      {navItems.map(i => (
+        <MenuItem data={i} />
+      ))}
+    </motion.ul>
+  );
+};
+
+
+
