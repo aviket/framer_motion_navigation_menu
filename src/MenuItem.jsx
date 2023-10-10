@@ -25,7 +25,6 @@ const colors = ["#FF008C", "#D309E1", "#9C1AFF", "#7700FF", "#4400FF"];
 
 
 export const MenuItem = (props) => {
-  print(props.data)
   const style = { border: `1px solid ${colors[3]}`, background: `rgba(0, 0, 0, 0.2)` };
   return (
     <motion.li
