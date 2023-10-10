@@ -35,7 +35,7 @@ export const MenuItem = (props) => {
       key={props.id}
     >
 
-      <div className="icon-div" onClick={() => fcallBack}>
+      <div className="icon-div" onClick={props.data.fcallBack}>
         <FontAwesomeIcon icon={props.data.icon} style={style} />
         <div className="text-placeholder" style={style} >{props.data.txt}</div>
       </div>
